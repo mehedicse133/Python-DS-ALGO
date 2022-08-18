@@ -1,8 +1,8 @@
 # Implement linear secarch algo
 
-# define a function that takes tow parameter
-# First paramete is a list 
-# Sencond is item, which item we are looking for in the input list
+# define a function that takes tow parameters
+# First parameter is a list of data 
+# Sencond is search_item, which item we are looking for on input list
 
 
 def linear_searech(data, item):
@@ -19,7 +19,7 @@ def linear_searech(data, item):
 
 if __name__ == "__main__":
     data = [20,30,40,50,60,70] 
-    item = int(input('Ente a value which you want to search in list :'))
+    item = int(input('Enter a value which you want to search in list :'))
     print(linear_searech(data, item)) 
 
 
