@@ -17,7 +17,26 @@ class Singly_link_list:
             self.head = new_node
         else:
             new_node.next = self.head
-            self.head = new_node   
+            self.head = new_node 
+
+    def add_last(self,data):
+        new_node = Node(data)
+        if self.head == None:
+            self.head = new_node
+        else:
+            temp = self.head
+            while temp:
+                if temp.next == None:
+                    temp.next = new_node
+                    return
+                temp = temp.next
+                
+               
+
+
+
+    def peak_head(self):
+        return print(self.head.data) 
 
     def peak_last(self):
         temp = self.head
@@ -26,9 +45,7 @@ class Singly_link_list:
                 return print(temp.data)
             temp = temp.next
               
-    def peak_head(self):
-        return print(self.head.data) 
-    
+
     def delete_first(self):
         if self.head == None:
             return
@@ -45,30 +62,16 @@ class Singly_link_list:
             temp2 = temp.next.next
         print(temp.data)
        
-        
-        
         # c = 0
         # while temp:
         #     c += 1
         #     temp = temp.next
         
-        
-            
-           
-
-        
-      
-            
-
-
-
     def display_list(self):
         temp = self.head
         while temp is not None:
-            
+            print(temp.data)
             temp = temp.next
-
-
 
 
 
@@ -81,6 +84,7 @@ if __name__ == "__main__":
     l.display_list()
     print('-'*20)
     l.delete_last()
+    l.display_list()
     
 
     # print('-'*20)
