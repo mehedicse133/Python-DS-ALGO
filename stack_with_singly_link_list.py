@@ -5,10 +5,16 @@ class Stack:
         self.__stack= Singly_link_list()
 
     def push(self,data):
-        self.__stack.add_last(data)    
+        self.__stack.add_last(data) 
 
+    def pop(self):
+        pass
+    
     def display(self):
-        self.__stack.display_list()            
+        self.__stack.display_list() 
+
+    def length(self):
+        return print(self.__stack.length())             
 
 
 if __name__ == "__main__":
@@ -17,4 +23,5 @@ if __name__ == "__main__":
     s.push(44)        
     s.push(55)        
     
-    s.display()       
+    s.display() 
+    s.length()      

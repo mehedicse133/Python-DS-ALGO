@@ -10,24 +10,29 @@ class Node:
 class Singly_link_list:
     def __init__(self):
         self.head = None
+        self.size = 0
 
     def add_first(self, data):
         new_node = Node(data)
         if self.head == None:
             self.head = new_node
+            self.size+=1
         else:
             new_node.next = self.head
             self.head = new_node 
+            self.size+=1
 
     def add_last(self,data):
         new_node = Node(data)
         if self.head == None:
             self.head = new_node
+            self.size+=1
         else:
             temp = self.head
             while temp:
                 if temp.next == None:
                     temp.next = new_node
+                    self.size+=1
                     return
                 temp = temp.next
                 
@@ -72,8 +77,8 @@ class Singly_link_list:
         while temp is not None:
             print(temp.data)
             temp = temp.next
-
-
+    def length(self):
+        return self.size
 
 if __name__ == "__main__":
     l = Singly_link_list()
@@ -85,6 +90,7 @@ if __name__ == "__main__":
     print('-'*20)
     l.delete_last()
     l.display_list()
+    print(l.length())
     
 
     # print('-'*20)
