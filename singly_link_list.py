@@ -38,18 +38,34 @@ class Singly_link_list:
 
     def delete_last(self):
         temp = self.head
-        c = 0
-        while temp:
-            c += 1
+        temp2= temp.next
+        while temp and temp2:
+            
             temp = temp.next
-        print(c)
+            temp2 = temp.next.next
+        print(temp.data)
+       
+        
+        
+        # c = 0
+        # while temp:
+        #     c += 1
+        #     temp = temp.next
+        
+        
+            
+           
+
+        
+      
+            
 
 
 
     def display_list(self):
         temp = self.head
         while temp is not None:
-            print(temp.data)
+            
             temp = temp.next
 
 
@@ -65,6 +81,7 @@ if __name__ == "__main__":
     l.display_list()
     print('-'*20)
     l.delete_last()
+    
 
     # print('-'*20)
     # l.peak_head()
