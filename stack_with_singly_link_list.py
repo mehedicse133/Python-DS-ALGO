@@ -2,14 +2,14 @@ from singly_link_list import*
 
 class Stack:
     def __init__(self):
-        self.__stack= Singly_link_list()
+        self.__stack = Singly_link_list()
 
     def push(self,data):
         self.__stack.add_last(data) 
 
     def pop(self):
-        pass
-    
+        self.__stack.delete_last()
+
     def display(self):
         self.__stack.display_list() 
 
@@ -22,6 +22,6 @@ if __name__ == "__main__":
     s.push(20)        
     s.push(44)        
     s.push(55)        
-    
+    s.pop()
     s.display() 
     s.length()      
