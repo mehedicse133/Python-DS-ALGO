@@ -32,7 +32,5 @@ class Stack:
 if __name__ == "__main__":
     s = Stack()
     s.pop()        
-           
-   
     s.display() 
     s.length()      
