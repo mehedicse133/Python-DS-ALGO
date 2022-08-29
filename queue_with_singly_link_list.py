@@ -5,9 +5,13 @@ class Queue:
         self.__queue = Singly_link_list()
 
     def enqueue(self,data):
+        if self.__queue.is_empty():
+            print('Queue is empty')
         self.__queue.add_last(data)  
 
     def dequeue(self):
+        if self.__queue.is_empty():
+            print('Queue is empty')
         self.__queue.delete_first() 
 
     def display_queue(self):
@@ -25,4 +29,5 @@ if __name__ == "__main__":
     q.display_queue()     
     print('-'*20)
     q.dequeue()
+    print( q.size())
     q.display_queue() 

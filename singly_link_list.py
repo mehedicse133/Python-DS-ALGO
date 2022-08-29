@@ -70,6 +70,13 @@ class Singly_link_list:
     def length(self):
         return self.size
 
+    def is_empty(self):
+        if self.size == 0:
+            return True
+        else:
+            return False
+
+
 
 if __name__ == "__main__":
     l = Singly_link_list()
