@@ -10,6 +10,9 @@ class Stack:
     def pop(self):
         self.__stack.delete_last()
 
+    def peak(self):
+        self.__stack.peak_last()  
+
     def display(self):
         self.__stack.display_list() 
 
@@ -21,7 +24,7 @@ if __name__ == "__main__":
     s = Stack()
     s.push(20)        
     s.push(44)        
-    s.push(55)        
+           
     s.pop()
     s.display() 
     s.length()      
