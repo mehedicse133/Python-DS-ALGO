@@ -8,7 +8,10 @@ class Stack:
         self.__stack.add_last(data) 
 
     def pop(self):
-        self.__stack.delete_last()
+        if self.__is_empty:
+            print("stack is empty")
+            return
+        self.__stack.delete_last()    
 
     def peak(self):
         self.__stack.peak_last()  
@@ -17,14 +20,19 @@ class Stack:
         self.__stack.display_list() 
 
     def length(self):
-        return print(self.__stack.length())             
+        if self.__is_empty:
+            print("Stack is empty")
+            return
+        return print(self.__stack.length())
 
+    def __is_empty(self):
+        if self.__stack.size == 0:
+            return True
 
 if __name__ == "__main__":
     s = Stack()
-    s.push(20)        
-    s.push(44)        
+    s.pop()        
            
-    s.pop()
+   
     s.display() 
     s.length()      

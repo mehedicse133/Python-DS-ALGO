@@ -1,11 +1,9 @@
 # Python Singly link list
 
-
 class Node:
     def __init__(self, data):
         self.data = data
         self.next = None
-
 
 class Singly_link_list:
     def __init__(self):
@@ -36,9 +34,6 @@ class Singly_link_list:
                     return
                 temp = temp.next
                 
-               
-
-
     def peak_head(self):
         return print(self.head.data) 
 
@@ -48,8 +43,7 @@ class Singly_link_list:
             if temp.next == None:
                 return print(temp.data)
             temp = temp.next
-              
-
+            
     def delete_first(self):
         if self.head == None:
             return
@@ -66,11 +60,6 @@ class Singly_link_list:
                 temp = temp.next
             temp.next = None      
             self.size-=1
-       
-        # c = 0
-        # while temp:
-        #     c += 1
-        #     temp = temp.next
         
     def display_list(self):
         temp = self.head
@@ -81,6 +70,7 @@ class Singly_link_list:
     def length(self):
         return self.size
 
+
 if __name__ == "__main__":
     l = Singly_link_list()
     l.add_first(20)
@@ -88,24 +78,6 @@ if __name__ == "__main__":
     l.add_first(19)
     l.display_list()
     print('-'*20)
+    l.delete_last()
     l.display_list()
-    # l.delete_last()
-    # l.display_list()
-    # print(l.length())
-    
-
-    # print('-'*20)
-    # l.peak_head()
-    # print('-'*20)
-    # l.peak_last()
-
-
-    # l.delete_first()
-    # l.display_list()
-    # print('-'*20)
-    # l.display_list()
-    # print('-'*20)
-    # l.delete_first()
-    # l.display_list()
-    l.peak_last()
-    l.peak_head()
+    print('-'*20)
