@@ -9,7 +9,7 @@ class Singly_link_list:
     def __init__(self):
         self.head = None
         self.size = 0
-
+        
     def add_first(self, data):
         new_node = Node(data)
         if self.head == None:
@@ -75,16 +75,24 @@ class Singly_link_list:
             return True
         else:
             return False
-
+    def serach(self,item):
+        temp = self.head
+        while temp is not None:
+            if temp.data == item:
+                return print("Item Found") 
+                
+            return print("Item Not Found")
 
 
 if __name__ == "__main__":
     l = Singly_link_list()
-    l.add_first(20)
-    l.add_first(23)
-    l.add_first(19)
+    l.add_last(8)
+    l.add_first(5)
+    l.add_first(4)
+    l.add_first(1)
+    l.add_last(9)
     l.display_list()
-    print('-'*20)
-    l.delete_last()
-    l.display_list()
-    print('-'*20)
+    l.serach(1)
+    
+    
+    
