@@ -33,7 +33,21 @@ class Singly_link_list:
                     self.size+=1
                     return
                 temp = temp.next
-                
+
+    def add_at_any(self,position,data):
+        new_node = Node(data)
+        curr_node = self.head
+        current_p = 0
+        while True:
+            if current_p == position:
+               prev_node.next = new_node
+               new_node.next =  curr_node
+               self.size+=1
+               break
+            prev_node =  curr_node
+            curr_node =  curr_node.next
+            current_p += 1   
+
     def peak_head(self):
         return print(self.head.data) 
 
@@ -75,6 +89,7 @@ class Singly_link_list:
             return True
         else:
             return False
+
     def serach(self,item):
         temp = self.head
         while temp is not None:
@@ -82,6 +97,11 @@ class Singly_link_list:
                 return print("Item Found") 
                 
             return print("Item Not Found")
+
+    
+
+       
+
 
 
 if __name__ == "__main__":
@@ -91,8 +111,10 @@ if __name__ == "__main__":
     l.add_first(4)
     l.add_first(1)
     l.add_last(9)
+    # l.display_list()
+    l.add_at_any(2,66)
+    l.add_at_any(3,77)
     l.display_list()
-    l.serach(1)
-    
+    print(l.length())
     
     
