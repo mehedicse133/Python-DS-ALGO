@@ -47,7 +47,7 @@ class Singly_link_list:
             prev_node =  curr_node
             curr_node =  curr_node.next
             current_p += 1   
-
+      
     def peak_head(self):
         return print(self.head.data) 
 
