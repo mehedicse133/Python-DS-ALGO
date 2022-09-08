@@ -97,6 +97,17 @@ class Singly_link_list:
                 return print("Item Found") 
                 
             return print("Item Not Found")
+    
+
+    def reverse(self):
+        curr = self.head
+        prev = None
+        while curr is not None:
+            next = curr.next
+            curr.next = prev
+            prev = curr
+            curr = next
+        self.head = prev 
 
     
 
@@ -116,5 +127,9 @@ if __name__ == "__main__":
     l.add_at_any(3,77)
     l.display_list()
     print(l.length())
+    print('*'*20)
+    l.reverse()
+    l.display_list()
+    
     
     
