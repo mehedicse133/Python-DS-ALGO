@@ -17,10 +17,10 @@ class doubly_Llist:
             self.head = new
             self.tail = new
         else:
-            self.tail.next = new
-            self.tail = new
-
-
+            pass
+        
+    def add_last(self,data):
+        pass
 
 
 if __name__ == "__main__":

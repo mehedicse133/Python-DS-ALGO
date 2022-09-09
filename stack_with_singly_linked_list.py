@@ -1,4 +1,4 @@
-from singly_link_list import*
+from singly_linked_list import*
 
 class Stack:
     def __init__(self):
