@@ -16,3 +16,15 @@ def is_empty():
         return  True
     return False           
 
+add(10)        
+add(20)
+add(30)
+add(40)
+add(888)
+print(stack)
+print(peek())
+print(len(stack))
+print(is_empty()) 
+
+
+
