@@ -117,6 +117,16 @@ class Singly_link_list:
 
 if __name__ == "__main__":
     l = Singly_link_list()
+    l.add_at_any(2,66)
+    l.add_at_any(3,77)
+    l.display_list()
+    print(l.length())
+    print('*'*20)
+    l.reverse()
+    l.display_list()
+
+
+    l = Singly_link_list()
     l.add_last(8)
     l.add_first(5)
     l.add_first(4)
