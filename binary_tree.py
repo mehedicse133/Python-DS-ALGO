@@ -5,3 +5,6 @@ class Node:
         self.val = val 
 
 
+class BinaryTree:
+    def __init__(self):
+        self.root = None
